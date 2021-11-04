@@ -8,7 +8,7 @@ const port = 3000;
   providedIn: 'root',
 })
 export class OrderService {
-  public api = `http://localhost:${port}/api/orders/`;
+  public api = `https://angular.johnmogi.com/api/orders/`;
   constructor(private http: HttpClient) {}
 
   public getAllorders(): Observable<OrderModel[]> {

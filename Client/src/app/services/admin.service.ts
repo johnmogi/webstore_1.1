@@ -9,7 +9,7 @@ const port = 3000;
   providedIn: 'root',
 })
 export class AdminService {
-  public api = `http://localhost:${port}/api/admin/`;
+  public api = `https://angular.johnmogi.com/api/admin/`;
 
   constructor(private http: HttpClient) {}
 

@@ -13,19 +13,19 @@ export class CartService {
 
   public makeCart(userID: Number): Observable<CartModel[]> {
     return this.http.post<CartModel[]>(
-      `http://localhost:${port}/api/cart/new/${userID}`,
+      `https://angular.johnmogi.com/api/cart/new/${userID}`,
       ''
     );
   }
 
   public findCart(id: Number): Observable<CartModel[]> {
     return this.http.get<CartModel[]>(
-      `http://localhost:${port}/api/cart/user/${id}`
+      `https://angular.johnmogi.com/api/cart/user/${id}`
     );
   }
   public fetchItems(num): Observable<CartItemModel[]> {
     return this.http.get<CartItemModel[]>(
-      `http://localhost:${port}/api/cart/history/${num}`
+      `https://angular.johnmogi.com/api/cart/history/${num}`
     );
   }
   // add item to cart
@@ -34,7 +34,7 @@ export class CartService {
     cartID: Number
   ): Observable<CartItemModel[]> {
     return this.http.post<CartItemModel[]>(
-      `http://localhost:${port}/api/cart/add-item/${cartID}`,
+      `https://angular.johnmogi.com/api/cart/add-item/${cartID}`,
       sendInfo
     );
   }
@@ -43,7 +43,7 @@ export class CartService {
     cartID: Number
   ): Observable<CartItemModel[]> {
     return this.http.delete<CartItemModel[]>(
-      `http://localhost:${port}/api/cart/drop/${cartID}/${productID}`
+      `https://angular.johnmogi.com/api/cart/drop/${cartID}/${productID}`
     );
   }
 }

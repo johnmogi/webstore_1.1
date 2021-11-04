@@ -6,7 +6,7 @@ import { CategoryModel } from '../models/Category-model';
 const port = 3000;
 @Injectable({ providedIn: 'root' })
 export class ShopService {
-  public api = `http://localhost:${port}/api/products/`;
+  public api = `https://angular.johnmogi.com/api/products/`;
   constructor(private http: HttpClient) {}
 
   public getAllProducts(): Observable<ProductModel[]> {

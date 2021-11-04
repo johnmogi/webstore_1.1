@@ -8,7 +8,7 @@ const port = 3000;
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  public api = `http://localhost:${port}/api/auth/`;
+  public api = `https://angular.johnmogi.com/api/auth/`;
 
   constructor(private http: HttpClient) {}
 
